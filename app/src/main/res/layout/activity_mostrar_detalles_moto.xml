@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondometal"
+    tools:context=".Activities.Activity_Mostrar_Detalles_Moto">
+
+    <Button
+        android:id="@+id/btn_volver"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:onClick="volver"
+        android:text="@string/volver"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_id_cliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:text="@string/matricula"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_cliente"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/txt_nombre"
+        android:layout_width="199dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:gravity="center_vertical"
+        android:text="@string/marca"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txt_direccion"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_cliente"
+        tools:ignore="RtlCompat,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/txt_direccion"
+        android:layout_width="140dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:gravity="center_vertical"
+        android:text="@string/modelo"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_cliente"
+        tools:ignore="RtlCompat,RtlSymmetry,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txt_moto_cliente"
+        android:layout_width="140dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:gravity="center_vertical"
+        android:text="@string/anio"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_direccion"
+        tools:ignore="RtlCompat,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/img_cliente"
+        android:layout_width="229dp"
+        android:layout_height="306dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icomoto"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:layout_width="114dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:onClick="editar"
+        android:text="@string/editar"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_moto_cliente" />
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="139dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="42dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:onClick="eliminar"
+        android:text="@string/eliminar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_moto_cliente" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

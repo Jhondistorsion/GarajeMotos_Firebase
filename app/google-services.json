@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "519809112991",
+    "firebase_url": "https://motosfirebase-default-rtdb.firebaseio.com",
+    "project_id": "motosfirebase",
+    "storage_bucket": "motosfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519809112991:android:100f288bde30d6a74f7baa",
+        "android_client_info": {
+          "package_name": "com.example.garajemotos_Firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519809112991-td5hd3rhqg7jcj2rh7n9i2n7td82e97e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrlfOmqggqgJgjhdKwBNZEQOv_jdGntJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519809112991-td5hd3rhqg7jcj2rh7n9i2n7td82e97e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

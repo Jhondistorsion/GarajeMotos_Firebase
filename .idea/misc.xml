@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.17890625" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_mostrar_detalles_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_mostrar_detalles_moto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_mostrar_moto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_nueva_cuenta.xml" value="0.264" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_nueva_modifica_moto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/activity_nuevo_modifica_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_FireBase/app/src/main/res/layout/item_recyclerview_moto.xml" value="0.27291666666666664" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_mostrar_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_mostrar_detalles_cliente.xml" value="0.25" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_mostrar_detalles_moto.xml" value="0.264" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_mostrar_moto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_nueva_modifica_moto.xml" value="0.264" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/activity_nuevo_modifica_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/item_moto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/item_recyclerview_cliente.xml" value="0.264" />
+        <entry key="..\:/Jonatan DAM2/PMDM/GarajeMotos_MySQL/app/src/main/res/layout/item_recyclerview_moto.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

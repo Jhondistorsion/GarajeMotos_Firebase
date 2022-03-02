@@ -1,0 +1,9 @@
+PROYECTO MOTOS FIREBASE
+=======================
+
+- CRUD Cliente funciona
+- Método comprueba matriculas duplicadas funciona pero muestra siempre el Toast
+- Evitar motos de cliente (matriculas) duplicadas. No funciona
+
+
+PENDIENTE:
