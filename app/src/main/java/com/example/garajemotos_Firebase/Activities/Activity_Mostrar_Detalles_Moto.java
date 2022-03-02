@@ -1,6 +1,5 @@
 package com.example.garajemotos_Firebase.Activities;
 
-import static com.example.garajemotos_Firebase.Utilidades.ImagenesBlobBitmap.bytes_to_bitmap;
 import static com.example.garajemotos_Firebase.Utilidades.ImagenesBlobBitmap.decodeSampledBitmapFrombyteArray;
 
 import android.content.DialogInterface;

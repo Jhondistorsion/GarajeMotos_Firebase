@@ -1,9 +1,6 @@
 package com.example.garajemotos_Firebase.Activities;
 
-import static com.example.garajemotos_Firebase.Utilidades.ImagenesBlobBitmap.bitmap_to_bytes_png;
-
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.garajemotos_Firebase.Clases.Moto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import garajemotos_Firebase.R;

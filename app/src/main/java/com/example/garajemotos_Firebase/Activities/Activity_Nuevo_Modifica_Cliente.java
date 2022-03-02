@@ -20,7 +20,6 @@ import com.example.garajemotos_Firebase.Clases.Moto;
 import com.example.garajemotos_Firebase.Controladores.ClienteFirebaseController;
 import com.example.garajemotos_Firebase.Controladores.MotoFirebaseController;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -41,7 +40,6 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
 
     private String nombre, direccion, moto, dni;
 
-    boolean matriculaRepite = true;
     private List<Cliente> listaClientes;
     private List<Moto> listaMotos;
 
@@ -58,10 +56,13 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
         sp_motos = (Spinner) findViewById(R.id.sp_motos);
         btn_crear_modificar = (Button) findViewById(R.id.btn_crear_modificar);
 
+        /*Codigo con la intencion de evitar motos de varios clientes
         obtenerMotos();
         obtenerClientes();
         obtenerComboMotos();
         preparaAdaptador(listaMotos);
+         */
+        cargarComboMotos();
 
 
         intent = getIntent();
@@ -77,6 +78,30 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
         }
 
 
+    }
+
+    private void cargarComboMotos() {
+        new MotoFirebaseController().obtener_motos(new MotoFirebaseController.MotoStatus() {
+            @Override
+            public void motoIsLoaded(List<Moto> motos, List<String> keys) {
+                preparaAdaptador(motos);
+            }
+
+            @Override
+            public void motoIsAdd() {
+
+            }
+
+            @Override
+            public void motoIsUpdate() {
+
+            }
+
+            @Override
+            public void motoIsDelete() {
+
+            }
+        });
     }
 
     private void obtenerComboMotos() {
@@ -124,7 +149,7 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
         new MotoFirebaseController().obtener_motos(new MotoFirebaseController.MotoStatus() {
             @Override
             public void motoIsLoaded(List<Moto> motos, List<String> keys) {
-                cargaListaMotos(motos);
+                listaMotos = motos;
             }
 
             @Override
@@ -144,9 +169,6 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
         });
     }
 
-    private void cargaListaMotos(List<Moto> motos) {
-        listaMotos = motos;
-    }
 
     private void preparaAdaptador(List<Moto> motos) {
         ArrayAdapter<Moto> motosAdapter;
@@ -191,7 +213,6 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
 
             //Metodo crear///////////////////////////
 
-            comprobarMatriculaUsada();
             boolean errorDatos = obtenerInformacion();
 
             if (!errorDatos) {
@@ -266,21 +287,6 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
                         otroCliente.setDireccion(direccion);
                         otroCliente.setMoto(mseleccionada.getMatricula());
 
-                        /*
-                        boolean matriculaUsada = comprobarMatriculaUsada();
-                        if (!matriculaUsada) {
-                            boolean insertadoOK = ClienteController.modificarCliente(otroCliente);
-                            if (insertadoOK) {
-                                mostrarMensajeOK();
-                            } else {
-                                mostrarMensajeError();
-                            }
-
-                            volverAlMenuPrincipal();
-                        }
-
-                         */
-
                         //Modificamos el cliente en la base de datos
                         new ClienteFirebaseController().actualizarCliente(new ClienteFirebaseController.ClienteStatus() {
                             @Override
@@ -328,37 +334,6 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
 
     }
 
-    private void comprobarMatriculaUsada() {
-
-        new ClienteFirebaseController().obtener_clientes(new ClienteFirebaseController.ClienteStatus() {
-            @Override
-            public void clienteIsLoaded(List<Cliente> clientes, List<String> keys) {
-                if (clientes.contains(mseleccionada.getMatricula())) {
-                    matriculaRepite = true;
-                } else {
-                    matriculaRepite = false;
-                }
-            }
-
-            @Override
-            public void clienteIsAdd() {
-
-            }
-
-            @Override
-            public void clienteIsUpdate() {
-
-            }
-
-            @Override
-            public void clienteIsDelete() {
-
-            }
-        });
-
-
-    }
-
     private void mostrarMensajeError() {
         Toast.makeText(this, "Error al insertar/modificar cliente", Toast.LENGTH_SHORT).show();
     }
@@ -401,10 +376,8 @@ public class Activity_Nuevo_Modifica_Cliente extends AppCompatActivity implement
         } else if (dni.isEmpty()) {
             Toast.makeText(this, "El campo DNI no puede estar vacío", Toast.LENGTH_SHORT).show();
             error = true;
-        } else if (matriculaRepite) {
-            Toast.makeText(this, "Error, la moto seleccionada se utiliza por otro cliente", Toast.LENGTH_SHORT).show();
-            error = true;
         }
+
         return error;
     }
 }

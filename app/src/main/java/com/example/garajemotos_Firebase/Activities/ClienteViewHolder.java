@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.garajemotos_Firebase.Clases.Cliente;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import garajemotos_Firebase.R;

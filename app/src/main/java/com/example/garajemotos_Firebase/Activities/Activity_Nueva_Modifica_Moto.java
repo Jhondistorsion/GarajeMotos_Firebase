@@ -137,7 +137,7 @@ public class Activity_Nueva_Modifica_Moto extends AppCompatActivity {
 
             if (!errorDatos) {
 
-                compruebaDuplicados();
+                //compruebaDuplicados(); Codigo con la intencion de evitar duplicados pero FireBase da problemas con su metodo
                 anioint = Integer.parseInt(anio);
 
                 AlertDialog.Builder alerta1 = new AlertDialog.Builder(this);
@@ -226,7 +226,6 @@ public class Activity_Nueva_Modifica_Moto extends AppCompatActivity {
                         otraMoto.setMarca(marca);
                         otraMoto.setModelo(modelo);
                         otraMoto.setAnio(anioint);
-                        //otraMoto.setFoto(fotov);
 
                         //Insertamos la imagen en motos//
                         String modo = "moto";
